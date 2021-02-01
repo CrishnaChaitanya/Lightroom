@@ -1,0 +1,42 @@
+.body{
+	margin: 0;
+}
+
+.grid{
+
+	display: grid;
+	grid-template-columns: repeat(3,200px);
+	justify-content: center;
+	align-items: center;
+	grid-gap: 10px;
+	height: 100vh;
+}
+.grid img{
+	width: 200px;
+	height: 200px;
+	cursor: pointer;
+
+}
+
+#lightbox{
+	position: fixed;
+	top: 0;
+	width: 100%; /*so that it fills up the screen*/
+	height: 100%;
+	z-index: 1000; /*we are setting thid to a max value so that it comes on top of all*/
+    background-color: rgba(0,0,0,.8);
+	display: none;
+}
+#lightbox.active{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+#lightbox img{
+	max-width: 90%;
+	max-height: 80%;
+	border:2px solid white;
+	padding:4px;
+	background-color: black;
+}
